@@ -26,9 +26,10 @@ public class AdvancedMod
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		LogHelper.error("PreInit Begin!");
 		ModBlocks.init();
 		proxy.preInit();
-		LogHelper.info("PreInit Complete!");
+		LogHelper.info("PreInit Done!");
 	}
 
 	@Mod.EventHandler
