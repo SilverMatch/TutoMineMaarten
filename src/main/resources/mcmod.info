@@ -1,0 +1,19 @@
+[
+{
+  "modid": "firstMod",
+  "name": "SilverMatch's first Mod",
+  "description": "Soooooo Exciting :D",
+  "version": "alpha 1.0.0",
+  "credits": "Created by SilverMatch",
+  "logoFile": "",
+  "mcversion": "",
+  "url": "",
+  "updateUrl": "",
+  "authors": [ "SilverMatch" ],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": [
+     "mod_MinecraftForge"
+    ]
+}
+]
