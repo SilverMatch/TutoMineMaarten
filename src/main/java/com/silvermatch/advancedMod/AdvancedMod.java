@@ -1,5 +1,6 @@
 package com.silvermatch.advancedMod;
 
+import com.silvermatch.advancedMod.init.ModBlocks;
 import com.silvermatch.advancedMod.proxy.CommonProxy;
 import com.silvermatch.advancedMod.reference.Reference;
 import com.silvermatch.advancedMod.utility.LogHelper;
@@ -25,6 +26,7 @@ public class AdvancedMod
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		ModBlocks.init();
 		proxy.preInit();
 		LogHelper.info("PreInit Complete!");
 	}
