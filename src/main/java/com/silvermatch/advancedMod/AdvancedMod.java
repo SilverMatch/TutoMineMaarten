@@ -4,6 +4,7 @@ import com.silvermatch.advancedMod.init.ModBlocks;
 import com.silvermatch.advancedMod.proxy.CommonProxy;
 import com.silvermatch.advancedMod.reference.Reference;
 import com.silvermatch.advancedMod.utility.LogHelper;
+import com.silvermatch.advancedMod.world.gen.WorldGeneratorFlag;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -11,6 +12,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class AdvancedMod
@@ -26,9 +28,9 @@ public class AdvancedMod
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		LogHelper.error("PreInit Begin!");
 		ModBlocks.init();
 		proxy.preInit();
+		GameRegistry.registerWorldGenerator(new WorldGeneratorFlag(), 0);
 		LogHelper.info("PreInit Done!");
 	}
 
