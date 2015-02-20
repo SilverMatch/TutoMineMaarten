@@ -1,4 +1,4 @@
-package com.silvermatch.advancedMod.proxy;
+package com.minemaarten.advancedmod.proxy;
 
 import net.minecraft.entity.player.EntityPlayer;
 
